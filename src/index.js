@@ -1,7 +1,20 @@
-// API response: update search term in h3 + list of results
+// return image thumbnails and show in a grid
+//function displayImages(response) {
+
+//let imageLink = "https://images.ala.org.au/image/" + imageID;
+
+//}
+
+// API response: update search term in h3 + number of results
 function showTaxa(response) {
   console.log(response);
   console.log(response.data.q);
+  let imageID = response.data.images[0].imageIdentifier;
+  console.log(imageID);
+  let images = response.data.images;
+  let imageLink = "https://images.ala.org.au/image/" + imageID;
+  let imagesElement = document.querySelector("#return-images");
+  let imagesHTML = `<div class="row">`;
 
   // update h3 with search term
   document.querySelector("h3").innerHTML =
@@ -11,9 +24,32 @@ function showTaxa(response) {
   document.querySelector("h4").innerHTML =
     response.data.totalImageCount + " images found";
 
-  //TO FIX!!!!!!  display image grid
-  //document.querySelector("#imageGrid").innerHTML =
-  //  response.data.images.[0].originalFilename;
+  // test: display the first image link : WORKS
+  console.log(imageLink);
+  document.querySelector("#return-images").innerHTML = imageLink;
+
+  // test 2: display first image
+  //document.querySelector("#return-images").innerHTML =
+  //response.data.images[0].originalFilename;
+  //src = `${response.data.images[0].imageIdentifier}`;
+  //alt = "";
+  //width = "40";
+
+  //Display image grid
+  images.forEach(function (originalFilename, index) {
+    //if (index < 6) {
+    imagesHTML =
+      imagesHTML +
+      `
+      <div class="col-2 imageThumbmail">
+      <img src="${imageLink}" href="${imageLink}" width="200" />
+      </div>
+      `;
+    //}
+  });
+
+  imagesHTML = imagesHTML + `</div>`;
+  imagesElement.innerHTML = imagesHTML;
 }
 
 // Search form + trigger API call

@@ -37,6 +37,10 @@ form {
   display: inline;
 }
 
+img {
+  padding: 7 px;
+}
+
 footer {
   font-size: 11px;
   margin-top: -17px;
@@ -51,7 +55,7 @@ footer {
   padding: 20px;
   margin: 20px;
   display: block;
-  max-width: 580px;
+  max-width: 1350px;
 }
 
 .search {
