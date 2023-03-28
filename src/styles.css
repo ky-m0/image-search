@@ -24,6 +24,7 @@ h3 {
 
 h4 {
   font-size: 12px;
+  margin-bottom: 30px;
 }
 
 p {
@@ -35,10 +36,6 @@ form {
   border-radius: 8px;
   font-size: 14px;
   display: inline;
-}
-
-img {
-  padding: 7 px;
 }
 
 footer {
@@ -60,4 +57,8 @@ footer {
 
 .search {
   display: inline;
+}
+
+.imageThumbnail {
+  margin-bottom: 20px;
 }

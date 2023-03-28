@@ -41,7 +41,7 @@ function showTaxa(response) {
     imagesHTML =
       imagesHTML +
       `
-      <div class="col-2 imageThumbmail">
+      <div class="col-2 imageThumbnail">
       <img src="${imageLink}" href="${imageLink}" width="200" />
       </div>
       `;
