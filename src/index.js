@@ -36,16 +36,36 @@ function showTaxa(response) {
   //width = "40";
 
   //Display image grid
-  images.forEach(function (originalFilename, index) {
-    //if (index < 6) {
-    imagesHTML =
-      imagesHTML +
-      `
-      <div class="col-2 imageThumbnail">
-      <img src="${imageLink}" href="${imageLink}" width="200" />
-      </div>
-      `;
-    //}
+  //images.forEach(function (originalFilename, index) {
+  //if (index < 6) {
+  //images.forEach(function (image, index) {
+  //const imageLink =
+  //"https://images.ala.org.au/image/" + image.imageIdentifier;
+  //imagesHTML += `
+  //<div class="col-2 imageThumbnail">
+  // <a href="${imageLink}"><img src="${imageLink}" width="200" /></a>
+  //</div>
+  //`;
+  // });
+
+  //imagesHTML =
+  //imagesHTML +
+  //`
+  //<div class="col-2 imageThumbnail">
+  //<a href="${imageLink}"><img src="${imageLink}" width="200" /></a>
+  //</div>
+  //`;
+  //}
+  //});
+
+  images.forEach(function (image, index) {
+    const imageLink =
+      "https://images.ala.org.au/image/" + image.imageIdentifier;
+    imagesHTML += `
+    <div class="col-2 imageThumbnail">
+      <a href="${imageLink}"><img src="${imageLink}" width="200" /></a>
+    </div>
+  `;
   });
 
   imagesHTML = imagesHTML + `</div>`;

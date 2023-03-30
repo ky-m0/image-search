@@ -59,6 +59,10 @@ footer {
   display: inline;
 }
 
+.imageGrid {
+  display: flex;
+}
+
 .imageThumbnail {
   margin-bottom: 20px;
 }
