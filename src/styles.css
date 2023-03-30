@@ -45,14 +45,13 @@ footer {
   text-align: left;
 }
 
-.container {
+.container-xs {
   border: 1px solid black;
   background-color: hsl(81, 31%, 81%);
   border-radius: 5px;
   padding: 20px;
   margin: 20px;
   display: block;
-  max-width: 1350px;
 }
 
 .search {
@@ -61,8 +60,14 @@ footer {
 
 .imageGrid {
   display: flex;
+  align-content: center;
+}
+
+.returnImages {
+  align-content: center;
 }
 
 .imageThumbnail {
   margin-bottom: 20px;
+  align-items: center;
 }
