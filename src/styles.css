@@ -4,7 +4,7 @@ h3,
 h4,
 footer {
   font-family: "source sans pro", sans-serif;
-  color: #212121;
+  color: #f2f2f2;
 }
 
 h1 {
@@ -47,7 +47,7 @@ footer {
 
 .container-xs {
   border: 1px solid black;
-  background-color: hsl(81, 31%, 81%);
+  background-color: #212121;
   border-radius: 5px;
   padding: 20px;
   margin: 20px;

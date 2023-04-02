@@ -41,8 +41,8 @@ function showTaxa(response) {
     const imageLink =
       "https://images.ala.org.au/image/" + image.imageIdentifier;
     imagesHTML += `
-    <div class="col-xl-2 col-lg-4 col-md-6 imageThumbnail">
-      <a href="${imageLink}"><img src="${imageLink}" width="200" /></a>
+    <div class="col-xl-3 col-lg-4 col-md-6 imageThumbnail">
+      <a href="${imageLink}"><img src="${imageLink}" width="275" /></a>
     </div>
   `;
   });
@@ -55,7 +55,7 @@ function showTaxa(response) {
 function searchForTaxa(event) {
   event.preventDefault();
   let inputTaxa = document.querySelector("#searchTaxa").value;
-  let apiUrl = `https://api.ala.org.au/images/ws/search?q=${inputTaxa}&fq=fileType%3Aimage&max=25`;
+  let apiUrl = `https://api.ala.org.au/images/ws/search?q=${inputTaxa}&fq=fileType%3Aimage&max=24`;
   axios.get(`${apiUrl}`).then(showTaxa);
 }
 
